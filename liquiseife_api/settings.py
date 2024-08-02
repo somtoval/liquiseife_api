@@ -142,7 +142,7 @@ STATICFILES_DIRS = [
 # Without STATIC_ROOT specified: You cannot use the collectstatic command, as Django does not know where to collect the static files. In this case, you would need to manually manage how static files are served in production, which can be cumbersome and error-prone.
 # Purpose: The absolute path to the directory where collectstatic will collect static files for deployment. When you run manage.py collectstatic, Django looks for all static files in your apps and any additional paths specified in STATICFILES_DIRS, and then it copies them into STATIC_ROOT.
 # Example: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') means collectstatic will collect static files and put them into a folder named staticfiles at the base of your project.
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # 4. MEDIA_URL
 # This is used to define the base URL for media files in both development and deployment. In development, it helps Django construct the URL patterns to serve user-uploaded files directly from the MEDIA_ROOT directory through the development server. It's essential for generating correct URLs in your templates or views, even when you're just running your project locally
