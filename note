@@ -1,0 +1,5 @@
+When doing PUT we do not upload urls as image, we rather upload image file path of our local machine and this will be the same thing in production, we will still download the image and upload it to our virtual server and from there serve it using the files we have and I used this to test it:
+curl -X PUT -H "Content-Type: multipart/form-data" \ -F "image=@C:/Users/user/Downloads/palms 2.jpg" -F "name=NewyNe" -F "description=This is good" -F "price=1899.99" http://localhost:8000/products/2/update/
+
+
+For my orderItem I used this to test it: curl -X PUT -H "Content-Type: application/json" -d "{\"product\": \"Fan\", \"order\": 6, \"quantity\": 15, \"date_added\": \"2024-08-02T12:00:00Z\"}" http://127.0.0.1:8000/order_item/5/update/
